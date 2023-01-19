@@ -1,0 +1,21 @@
+<div class="jumbotron">
+   <div class="row">
+      <div class="col-8">
+         <h4>
+            <%= mahasiswa.nama %>
+         </h4>
+         <p class="lead">Alert! do you want to delete this Mahasiswa?</p>
+         <p class="lead">
+         <form action="/deleteMahasiswa/<%= mahasiswa._id %>" method="POST">
+            <button class="btn btn-danger" type="submit">Delete</button>
+            <a class="btn btn-light" href="/">Cancel</a>
+         </form>
+         </p>
+      </div>
+      <div class="col-4">
+         <h1 class="float-right text-danger">
+            <i class="fa fa-trash"></i>
+         </h1>
+      </div>
+   </div>
+</div>

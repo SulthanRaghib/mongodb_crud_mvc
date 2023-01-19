@@ -1,0 +1,54 @@
+<div class="row">
+   <div class="col-12">
+      <h4>All Mahasiswa</h4>
+   </div>
+   <div class="col-12">
+      <a href="/addMahasiswa" class="btn btn-success btn-sm"><i class="bi bi-plus me-1"></i>Add Mahasiswa</a>
+   </div>
+
+   <table class="table table-hover mt-2">
+      <thead class="table-dark">
+         <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NIM</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Jurusan</th>
+            <th scope="col">Roomble</th>
+            <th scope="col">Action</th>
+         </tr>
+      </thead>
+      <tbody>
+         <% if(mahasiswa.length> 0) { %>
+            <% for(let mhs of mahasiswa) { %>
+               <tr>
+                  <th scope="row">
+                     <%= mhs._id %>
+                  </th>
+                  <td>
+                     <%= mhs.nim %>
+                  </td>
+                  <td>
+                     <%= mhs.nama %>
+                  </td>
+                  <td>
+                     <%= mhs.jurusan %>
+                  </td>
+                  <td>
+                     <%= mhs.roomble %>
+                  </td>
+                  <td>
+                     <a href="/editMahasiswa/<%= mhs._id %>" class="btn btn-warning btn-sm"><i
+                           class="bi bi-pencil-square me-1"></i>Edit</a>
+                     <a href="/deleteMahasiswa/<%= mhs._id %>" class="btn btn-danger btn-sm"><i
+                           class="bi bi-trash me-1"></i>Delete</a>
+                  </td>
+               </tr>
+               <% } %>
+                  <% } else { %>
+                     <tr>
+                        <td colspan="6" class="text-center">No Data</td>
+                     </tr>
+                     <% } %>
+      </tbody>
+   </table>
+</div>

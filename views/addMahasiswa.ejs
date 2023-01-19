@@ -1,0 +1,45 @@
+<div class="row">
+   <div class="col-12">
+      <h4>Add Mahasiswa</h4>
+   </div>
+
+   <form class="row g-3" action="/addMahasiswa" method="POST">
+      <div class="col-md-6">
+         <label for="validationDefault01" class="form-label">NIM</label>
+         <input type="number" class="form-control" id="validationDefault01" name="nim" required>
+      </div>
+      <div class="col-md-6">
+         <label for="validationDefault02" class="form-label">NAMA</label>
+         <input type="text" class="form-control" id="validationDefault02" name="nama" required>
+      </div>
+      <div class="col-md-6">
+         <label for="validationDefault04" class="form-label">ROOMBLE</label>
+         <select class="form-select" id="validationDefault04" name="roomble" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="TI01">TI01</option>
+            <option value="TI02">TI02</option>
+            <option value="TI03">TI03</option>
+            <option value="TI04">TI04</option>
+            <option value="TI05">TI05</option>
+            <option value="TI06">TI06</option>
+            <option value="TI07">TI07</option>
+            <option value="TI08">TI08</option>
+            <option value="TI09">TI09</option>
+            <option value="TI10">TI10</option>
+         </select>
+      </div>
+      <div class="col-md-6">
+         <label for="validationDefault03" class="form-label">JURUSAN</label>
+         <select class="form-select" id="validationDefault03" name="jurusan" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="Sistem Informasi">Sistem Informasi</option>
+            <option value="Teknik Informatika">Teknik Informatika</option>
+            <option value="Bisnis Digital">Bisnis Digital</option>
+         </select>
+      </div>
+      <div class="col-12">
+         <button class="btn btn-primary" type="submit">Submit form</button>
+         <a href="/" class="btn btn-light">Cancel</a>
+      </div>
+   </form>
+</div>
